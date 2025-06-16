@@ -157,6 +157,10 @@ body * {
     color: #ffffff;
  }
 
+ .content-box__arrow:hover {
+    cursor: pointer;
+ }
+
  .content-box__slider {
     position: relative;
     width: 500px;
