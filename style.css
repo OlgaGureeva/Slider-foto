@@ -84,6 +84,7 @@ body * {
     display: flex;
     flex-wrap: wrap;
     gap: 34px;
+    margin-bottom: 80px;
 }
 
 .content-box__subtitle {
@@ -111,21 +112,22 @@ body * {
  .content-box__text {
     /*max-width: 442px;*/
     margin-top: 176px;
+    margin-right: 50px;
  }
 
- .picture {
+ .content-box__titles {
     display: flex;
     flex-direction: column;
     margin-top: 107px;
  }
 
- .picture__list {
+ .titles__list {
     list-style: none;
     display: flex;
     margin-bottom: 45px;
  }
 
- .picture__item {
+ .titles__item {
     font-family: 'Yeseva One';
     font-size: 14px;
     font-weight: 400;
@@ -135,7 +137,7 @@ body * {
     margin-right: 60.5px;
  }
 
- .picture__item:hover {
+ .titles__item:hover {
     cursor: pointer;
     font-family: 'Yeseva One';
     font-size: 14px;
@@ -150,6 +152,8 @@ body * {
  .content-box__arrows {
     display: flex;
     flex-flow: row nowrap;
+    max-width: 207px;
+    justify-content: space-between;
  }
 
  .content-box__arrow {
@@ -163,8 +167,33 @@ body * {
 
  .content-box__slider {
     position: relative;
-    width: 500px;
-    height: 250px;
+    width: 679px;
+    height: 482px;
+ }
+
+ .content-box__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 70px;
+ }
+
+ .slider__dots-item {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+ }
+
+ .slider__dots-item:hover {
+    background: #ffffff;
+ }
+
+ .slider__dots-item.active {
+    background: #ffffff;
  }
 
  .image {
@@ -175,4 +204,8 @@ body * {
     position: absolute;
     opacity: 0;
     transition: opacity 800ms ease;
+ }
+
+ .image.active {
+    opacity: 1;
  }
