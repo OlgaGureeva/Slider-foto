@@ -1,18 +1,17 @@
 'use strict'
 
-
-let fotoFirst = document.getElementById("first")
-let fotoSecond = document.getElementById("second")
-let fotoThird = document.getElementById("third")
+//let fotoFirst = document.getElementById("first")
+//let fotoSecond = document.getElementById("second")
+//let fotoThird = document.getElementById("third")
 
 let images = [{
-    fotoFirst,
+    URL: "./png/chairs-by-window.png",
     title: "Chairs by the window"
 }, {
-    fotoSecond,
+    URL: "./png/tv-zone.png",
     title: "TV zone"
 }, {
-    fotoThird,
+    URL: "./png/Combined kitchen-living space.png",
     title: "Combined kitchen-living space"
 }]
 
@@ -28,7 +27,7 @@ function initSlider() {
  function initImages() {
     images.forEach((image, index) => {
         let imageDiv = `<div class="image n${index} ${index === 0? "active" 
-            : ""}" style="background-image:url(${images[index].fotoFirst, fotoSecond, fotoThird}); data-index = "n${index}"></div>`;
+            : ""}" style="background-image:url('${images[index].URL}');" data-index = "${index}"></div>`;
     sliderImages.innerHTML = sliderImages.innerHTML + imageDiv;
     })
  }
